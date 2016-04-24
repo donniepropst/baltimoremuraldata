@@ -18,9 +18,15 @@ $ npm install http-server -g
 $ cd directoryofproject/
 $ http-server -o
 ```
-The -o option will automatically open the project in a tab of your web browser
+The -o option will automatically open the project in a tab of your web browser on port 8080
+
+### Just Browsing?
+If you just want to view the web app live please visit this link:
 
 
+https://whispering-castle-95539.herokuapp.com/
+
+This web app is running on a free heroku dyno, so it will take a few seconds to wake up if it hasn't been pinged in awhile.
 
 ### Tech
 
