@@ -1,0 +1,109 @@
+  html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /*max all columns within rows have the same height */
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .navbar{
+    background-color: #33658A !important;
+    margin-bottom: 0;
+  }
+  .white-heading-title{
+    color: white !important;
+    font-size: 2em !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .text-box{
+    padding-left: 10px;
+  }
+  .line-break{
+    white-space: pre-line;
+  }
+   
+
+  /* MAP CSS*/
+  #map-section{
+   
+    padding-top: 20px;
+    padding-bottom: 20px; 
+  }
+  #map-title{
+    margin-left: 40px;
+    text-align: center;
+  }
+ /* stations css is for all points on the map */
+  .stations, .stations svg {
+      position: absolute;
+  }
+
+  .stations svg {
+    display: inline;
+    padding-right: 100px;
+    font: 10px sans-serif;
+  }
+
+  .stations circle {
+    stroke: black;
+    stroke-width: 1.5px;
+  }
+
+
+  /* Bar Chart CSS */
+  #year-section{
+    background-color: #2E282A;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .year-title-white{
+    color: #ffffff;
+    text-align: center;
+  }
+
+
+  /* Bubble Chart CSS */
+  div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 100px;          
+    /*height: 60px;  use display: inline-block because some artist names are long*/        
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: lightsteelblue;
+    display:inline-block; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;    
+    } 
+
+    /*Footer */
+   footer{
+      background-color: #33658A;
+      padding-top: 5px;
+      margin-bottom: 0;
+    }
+    .white-text-footer{
+      color: white !important;
+    }
+    .about-text{
+      color: #FF7535;
+    }
+    .about-text:hover{
+      color: #FF570A;
+    }
+    .white-icon{
+      color: white !important;
+    }
+    .white-icon:hover{
+     color: #FF570A !important;
+    };

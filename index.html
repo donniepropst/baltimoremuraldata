@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app = "baltimoreMurals">
+<head>
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<div ng-include="'layouts/header.html'"></div> <!-- include the header file -->
+
+<body>
+
+    <!-- Map -->    
+      <div class = "row-eq-height" id = "map-section" ng-controller="mapController">
+            <div class="col-md-8 col-md-offset-2" id = "map">
+              <d3-map> </d3-map>
+            </div>
+            <div class "col-md-1" id = "map-title"> 
+              <div class = "text-box">
+                <h2 class= "line-break">{{title}}</h2>
+              </div>
+            </div>
+      </div>
+              
+          
+    <!-- Yearly Murals -->
+      <div class = "row" id = "year-section" ng-controller="yearlyPaintingsController">
+          <div class="col-md-1 col-md-offset-1 title-accent">
+            <h2 class = "year-title-white">{{title}}</h2>
+          </div>
+          <div class="col-md-7" id = "year-chart" >
+           <d3-year> </d3-year>
+          </div>
+          <div class = "col-md-2">
+          </div>
+      </div>
+
+
+    <!-- Artist 'Frequency' -->
+     <div class = "row" ng-controller="artistsController"> 
+      
+        <div class="col-md-7 col-md-offset-1" id = "frequency-chart" >
+         <d3-artists> </d3-artists>
+        </div>
+         <div class="col-md-4">
+          <h2>{{title}}</h2>
+          <h5><i class = "line-break">{{hint}}</i></h5>
+        </div>
+      </div>
+
+
+   
+</body>
+
+<div ng-include="'layouts/footer.html'"></div> <!-- include the header file -->
+ 
+
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+ 
+
+   <script src="//maps.google.com/maps/api/js?sensor=false"></script>
+
+  <!-- app setup to load modules and directives -->
+  <script src="scripts/app.js"></script> 
+
+  <!-- setup d3 -->
+  <script src="scripts/services/d3.js"></script>
+
+  <!-- load controllers for each chart -->
+  <script src="scripts/controllers/mapController.js"></script>
+  <script src="scripts/controllers/yearlyPaintingsController.js"></script>
+  <script src="scripts/controllers/artistsController.js"></script>
+
+
+  <!-- load directives for each chart -->
+  <script src="scripts/directives/d3Map.js"></script>
+  <script src="scripts/directives/d3Yearly.js"></script>
+  <script src="scripts/directives/d3Artists.js"></script>
+
+
+
+</html> 
