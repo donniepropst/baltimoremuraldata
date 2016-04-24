@@ -15,9 +15,10 @@
           d3.csv("data1987_2016.csv", function(error, data) {
               if (error) throw error;
 
-               var margin = {top: 20, right: 20, bottom: 30, left: 40},
-                  width = 960 - margin.left - margin.right,
-                  height = 600 - margin.top - margin.bottom;
+             //setup canvas, scales, and the "pack"
+             var margin = {top: 20, right: 20, bottom: 30, left: 40},
+                width = 960 - margin.left - margin.right,
+                height = 600 - margin.top - margin.bottom;
 
               var color  = d3.scale.category10(); //color category
 
@@ -32,20 +33,22 @@
                 .attr("width", "100%")
                 .attr("height", height)
                 .append("g");
-                  //.attr("transform", "translate(50,50)");  
-               // .attr("class", "bubble");
+                  
              
              // Define the div for the tooltip
             var div = d3.select("body").append("div") 
                 .attr("class", "tooltip")       
                 .style("opacity", 0);
 
+              //process data to count unique artist names
               var newData = processData(data);
               data = null;
               
+
               var nodes = pack.nodes(newData)
                 .filter(function(d){return !d.children;});
 
+              
               var node = canvas.selectAll(".node")
                 .data(nodes)
                 .enter()
@@ -103,8 +106,7 @@
                             dataPairs.push({name: name, value: tally[name]});
                         }
                     }
-                    //console.log(dataPairs[1]);
-                    //return dataPairs;
+                    
                     return {children: dataPairs};
                   }
                            

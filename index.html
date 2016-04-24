@@ -12,14 +12,12 @@
 <body>
 
     <!-- Map -->    
-      <div class = "row-eq-height" id = "map-section" ng-controller="mapController">
+      <div class = "row" id = "map-section" ng-controller="mapController">
             <div class="col-md-8 col-md-offset-2" id = "map">
               <d3-map> </d3-map>
             </div>
             <div class "col-md-1" id = "map-title"> 
-              <div class = "text-box">
-                <h2 class= "line-break">{{title}}</h2>
-              </div>
+                <h3 class= "line-break">{{title}}</h2>
             </div>
       </div>
               
@@ -29,7 +27,7 @@
           <div class="col-md-1 col-md-offset-1 title-accent">
             <h2 class = "year-title-white">{{title}}</h2>
           </div>
-          <div class="col-md-7" id = "year-chart" >
+          <div class="col-md-7" id = "year-chart">
            <d3-year> </d3-year>
           </div>
           <div class = "col-md-2">
@@ -38,7 +36,7 @@
 
 
     <!-- Artist 'Frequency' -->
-     <div class = "row" ng-controller="artistsController"> 
+     <div class = "row" id="artist-section" ng-controller="artistsController"> 
       
         <div class="col-md-7 col-md-offset-1" id = "frequency-chart" >
          <d3-artists> </d3-artists>
@@ -78,7 +76,5 @@
   <script src="scripts/directives/d3Map.js"></script>
   <script src="scripts/directives/d3Yearly.js"></script>
   <script src="scripts/directives/d3Artists.js"></script>
-
-
 
 </html> 

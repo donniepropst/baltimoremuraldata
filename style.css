@@ -4,6 +4,10 @@
     margin: 0;
     padding: 0;
   }
+  body{
+    overflow-y: scroll;
+  overflow-x: hidden;
+  }
   /*max all columns within rows have the same height */
   .row-eq-height {
     display: -webkit-box;
@@ -33,7 +37,6 @@
 
   /* MAP CSS*/
   #map-section{
-   
     padding-top: 20px;
     padding-bottom: 20px; 
   }
@@ -72,6 +75,11 @@
 
 
   /* Bubble Chart CSS */
+
+  #artist-section{
+   
+  }
+
   div.tooltip { 
     position: absolute;     
     text-align: center;     
@@ -91,6 +99,7 @@
       background-color: #33658A;
       padding-top: 5px;
       margin-bottom: 0;
+      overflow-x: hidden;
     }
     .white-text-footer{
       color: white !important;
