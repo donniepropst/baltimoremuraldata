@@ -10,8 +10,16 @@ $ cd directoryofproject/
 $ python -m SimpleHTTPServer
 ```
 Now you should be able to visit the web app locally on port 8000, or another port if you already have a local app running on that port.
-
 Go into browser and enter 127.0.0.1:8000 or localhost:8000
+
+##### or with node package manager
+```sh
+$ npm install http-server -g
+$ cd directoryofproject/
+$ http-server -o
+```
+The -o option will automatically open the project in a tab of your web browser
+
 
 
 ### Tech
