@@ -17,7 +17,7 @@
               <d3-map> </d3-map>
             </div>
             <div class "col-md-1" id = "map-title"> 
-                <h3 class= "line-break">{{title}}</h2>
+                <h3 ng-cloak class= "line-break">{{title}}</h2>
             </div>
       </div>
               
@@ -25,7 +25,7 @@
     <!-- Yearly Murals -->
       <div class = "row" id = "year-section" ng-controller="yearlyPaintingsController">
           <div class="col-md-1 col-md-offset-1 title-accent">
-            <h2 class = "year-title-white">{{title}}</h2>
+            <h2 ng-cloak class = "year-title-white">{{title}}</h2>
           </div>
           <div class="col-md-7" id = "year-chart">
            <d3-year> </d3-year>
@@ -42,8 +42,8 @@
          <d3-artists> </d3-artists>
         </div>
          <div class="col-md-4">
-          <h2>{{title}}</h2>
-          <h5><i class = "line-break">{{hint}}</i></h5>
+          <h2 ng-cloak>{{title}}</h2>
+          <h5 ng-cloak><i class = "line-break">{{hint}}</i></h5>
         </div>
       </div>
 
